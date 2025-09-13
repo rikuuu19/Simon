@@ -1,3 +1,4 @@
+
 // 🎵 Preload sounds
 let startSound = new Audio("start.mp3.mp3");
 let endSound = new Audio("end.mp3.mp3");

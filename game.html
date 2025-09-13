@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simon Game</title>
   <link rel="stylesheet" href="game.css">
 </head>
 <body>
   <h1>Simon Game</h1>
   <h2 id="game-instruction">Press a key or Start button to begin</h2>
-  <h3 id="level-title">Level: 0</h3>
-  <h3 id="score">Score: 0</h3>
-  <h3 id="high-score">High Score: 0</h3>
-
-  <!-- Difficulty Buttons -->
-  <div class="difficulty">
-    <button class="mode-btn" data-speed="800">Easy</button>
-    <button class="mode-btn" data-speed="500">Medium</button>
-    <button class="mode-btn" data-speed="300">Hard</button>
+  <div class="top-info">
+    <h3 id="level-title">Level: 0</h3>
+    <h3 id="score">Score: 0</h3>
+    <h3 id="high-score">High Score: 0</h3>
   </div>
 
-  <!-- Theme Switcher -->
-  <button id="theme-btn">🌙 Dark Mode</button>
-
-  <!-- Game Buttons -->
-  <div class="btn-container">
-    <div class="line-one">
-      <div class="btn red" id="red"></div>
-      <div class="btn yellow" id="yellow"></div>
+  <div class="controls">
+    <div class="difficulty">
+      <button class="mode-btn" data-speed="800">Easy</button>
+      <button class="mode-btn" data-speed="500">Medium</button>
+      <button class="mode-btn" data-speed="300">Hard</button>
     </div>
-    <div class="line-two">
-      <div class="btn green" id="green"></div>
-      <div class="btn purple" id="purple"></div>
-    </div>
+    <button id="theme-btn">🌙 Dark Mode</button>
+    <button id="start-btn">▶ Start</button>
   </div>
 
-  <!-- Scoreboard -->
-  <h3>Last Scores:</h3>
-  <ul id="scoreboard"></ul>
+  <div class="game-layout">
+    <!-- Left Column: How to Play -->
+    <div class="side-box" id="how-to-play">
+      <h3>📜 Rules / How to Play</h3>
+      <ol>
+        <li>Press Start or any key</li>
+        <li>Watch the sequence</li>
+        <li>Repeat the sequence</li>
+        <li>Reach the highest level you can!</li>
+      </ol>
+    </div>
 
-  <!-- Start Button for Mobile -->
-  <button id="start-btn">▶ Start</button>
+    <!-- Center: Game Buttons -->
+    <div class="btn-container">
+      <div class="line-one">
+        <div class="btn red" id="red"></div>
+        <div class="btn yellow" id="yellow"></div>
+      </div>
+      <div class="line-two">
+        <div class="btn green" id="green"></div>
+        <div class="btn purple" id="purple"></div>
+      </div>
+    </div>
+
+    <!-- Right Column: Scoreboard -->
+    <div class="side-box" id="last-scores">
+      <h3>📊 Last Scores</h3>
+      <ul id="scoreboard"></ul>
+    </div>
+  </div>
 
   <script src="game.js"></script>
 </body>
